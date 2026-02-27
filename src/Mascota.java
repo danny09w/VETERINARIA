@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Mascota {
     //ATRIBUTOS
     private String nombre;
@@ -78,12 +80,31 @@ public class Mascota {
                 '}';
     }
     //METODOS PROPIOS
-    public boolean vacunar(){
-        if (vacunado==false){
-
-
-
+    public void vacunar(){
+        this.vacunado = true;
+        System.out.println("***TU MASCOTA YA CUENTA CON SU VACUNA***");
+    }
+    public void alimentar(double cantidad){
+        if (cantidad>peso){
+            this.peso+=cantidad;
+            System.out.println("***¡FELICIDADES! TU MASCOTA AH SUBIDO DE PESO. AHORA PESA: "+this.peso);
+        }else {
+            System.out.println("***LO SENTIMOS, LA CANTIDAD QUE INGRESASTE NO ES VALIDA***");
         }
     }
-
+    public void cumpleA(){
+        this.edad++;
+        System.out.println("***TU MASCOTA AHORA TIENE: "+this.edad+" AÑOS");
+    }
+   //mostrar
+   public void mostrar() {
+       String estado = vacunado ? "Sí" : "No";
+       System.out.println("\n***Ficha de la Mascota***");
+       System.out.println("Nombre: " + nombre);
+       System.out.println("Especie: " + especie);
+       System.out.println("Edad: " + edad + " años");
+       System.out.println("Peso: " + peso + " kg");
+       System.out.println("Vacunado: " + estado);
+       System.out.println("*******************");
+   }
 }
