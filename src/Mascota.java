@@ -71,13 +71,12 @@ public class Mascota {
 
     @Override
     public String toString() {
-        return "Mascota{" +
-                "nombre='" + nombre + '\'' +
-                ", especie='" + especie + '\'' +
-                ", edad=" + edad +
-                ", peso=" + peso +
-                ", vacunado=" + vacunado +
-                '}';
+        return "Mascota" +
+                "nombre='" + nombre + "\n" +
+                ", especie='" + especie + "\n" +
+                ", edad='" + edad +"\n"+
+                ", peso=" + peso +"\n"+
+                ", vacunado=" + vacunado +"\n";
     }
     //METODOS PROPIOS
     public void vacunar(){
@@ -85,7 +84,7 @@ public class Mascota {
         System.out.println("***TU MASCOTA YA CUENTA CON SU VACUNA***");
     }
     public void alimentar(double cantidad){
-        if (cantidad>peso){
+        if (cantidad>0){
             this.peso+=cantidad;
             System.out.println("***¡FELICIDADES! TU MASCOTA AH SUBIDO DE PESO. AHORA PESA: "+this.peso);
         }else {
